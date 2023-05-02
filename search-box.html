@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Barra de pesquisa - Práticas da @code55.io </title>
+    <style>
+
+        /* Definindo padrões para a página */
+        * {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            letter-spacing: 0px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            scroll-behavior: smooth;
+            margin: 0;
+        }
+
+        html {
+            padding: 5rem;
+            background-color: #06152A;
+            color: #EFEFEF;
+        }
+
+        /* Estilizando a caixa de input */
+        input {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 16px;
+            background: transparent;
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border: solid 3px #09B734;
+            outline: none;
+            border-radius: 40px;
+            transition: all 0.5s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #09B734;
+        }
+
+        /* Esilizando o placeholder do input */ 
+        input::placeholder {
+            color: #EFEFEF;
+            opacity: 0;
+            transition: opacity 150ms ease-out;
+        }
+
+        input:focus::placeholder {
+            opacity: 1;
+        }
+
+        /* Estilização do hover */
+        input:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #09B734;
+        }
+
+        input:focus,
+        input:not(:placeholder-shown) {
+            width: 250px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #09B734;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <input type="text" placeholder="Pesquisar . . ." required>
+    </div>
+</body>
+
+</html>
